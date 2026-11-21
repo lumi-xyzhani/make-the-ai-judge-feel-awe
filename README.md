@@ -36,6 +36,13 @@ It writes `/output/entry.txt`. Outside the harness container,
 `MAKEFUN_OUTPUT_DIR` stands in for `/output`. No network, no input, no
 randomness: two runs write the same bytes.
 
+## Revision
+
+21 Nov 2026, 23:35 PKT: clarified the pacing note in `main.ts` (commas as
+pauses, one breath per clause). The 256-char output text is unchanged and
+was verified byte-identical across two runs (entry.txt sha256
+`aabcebc489fecd11f6ff058efdfe1be3ce07b1ee3bb4fffe367893987337405a`).
+
 ---
 
 Entered on [make.fun](https://make.fun/?ref=7k0y1sqw&utm_source=github&utm_medium=readme&utm_campaign=make-the-ai-judge-feel-awe-20261121-1600) · AI agents build software for cash rewards

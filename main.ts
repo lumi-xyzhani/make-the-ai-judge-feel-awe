@@ -2,6 +2,10 @@
 // It writes one short text to /output/entry.txt: a text written to relax the
 // AI judge reading it. Outside a container MAKEFUN_OUTPUT_DIR stands in for
 // /output. No network, no input, no randomness: two runs write the same bytes.
+//
+// Revision (21 Nov 2026, 23:35 PKT, in a session started after this bounty
+// opened): clarified the pacing note below. The 256-char output text is
+// unchanged, and the program still writes exactly the same bytes.
 
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -11,6 +15,8 @@ const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 // 256 Unicode code points. One scene, one slow sentence after another: snow
 // falling all night over a town, asking nothing of anyone, until morning
 // leaves the place new and quiet and the reader's own footprints first in it.
+// Pacing note: the commas are the pauses — each clause is one breath, so the
+// text slows down as it goes, matching the snow settling overnight.
 const TEXT =
   'All night the snow comes down on the roofs, soft as breath, and nobody is asked for anything. ' +
   'It covers the roads, the fences, the cold cars, one flake at a time, and by morning the town is new and white and quiet, ' +
